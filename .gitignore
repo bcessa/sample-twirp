@@ -1,0 +1,28 @@
+# Generals
+.DS_Store
+.idea
+
+# Builds
+sample-twirp
+
+# Sockets
+*.sock
+
+# Deps
+vendor/**
+
+# PKI
+*.crt
+*.csr
+*.pem
+*.key
+
+# protobuf / RPC
+*.swagger.json
+*.pb.go
+*.twirp.go
+proto/*_test.go
+proto/service.desc
+
+# Temp files
+tmp

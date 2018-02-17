@@ -1,0 +1,13 @@
+syntax = "proto3";
+package org.item.sample;
+option go_package = "sample";
+
+message Empty {}
+
+message Pong {
+  bool ok = 1;
+}
+
+service BusinessCase {
+  rpc Ping(Empty) returns (Pong);
+}
