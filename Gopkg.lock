@@ -18,7 +18,12 @@
   packages = [
     "jsonpb",
     "proto",
-    "ptypes/struct"
+    "ptypes",
+    "ptypes/any",
+    "ptypes/duration",
+    "ptypes/empty",
+    "ptypes/struct",
+    "ptypes/timestamp"
   ]
   revision = "925541529c1fa6821df4e44ce2723319eb2be768"
   version = "v1.0.0"
@@ -140,6 +145,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "172e471cdcf137fd0fa025920cb8ecce5f88702a8b04848b6654079aa33ae556"
+  inputs-digest = "157a3684719254df6b816cdc3e8e67f990538ea0ed6b25763aaedf6a14db8aec"
   solver-name = "gps-cdcl"
   solver-version = 1
