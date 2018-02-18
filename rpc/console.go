@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/bcessa/sample-twirp/proto"
 	"github.com/chzyer/readline"
+	"github.com/golang/protobuf/ptypes/empty"
 	"log"
 )
 
@@ -30,7 +31,7 @@ func (c *ClientConsole) Start() error {
 		}
 		switch line {
 		case "p":
-			pong, err := c.client.Ping(context.TODO(), &sample.Empty{})
+			pong, err := c.client.Ping(context.TODO(), &empty.Empty{})
 			if err != nil {
 				log.Println("error", err)
 			}

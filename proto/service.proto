@@ -2,12 +2,37 @@ syntax = "proto3";
 package org.item.sample;
 option go_package = "sample";
 
-message Empty {}
+// Custom types
+import "github.com/golang/protobuf/ptypes/empty/empty.proto";
+import "github.com/golang/protobuf/ptypes/timestamp/timestamp.proto";
+import "github.com/golang/protobuf/ptypes/struct/struct.proto";
 
 message Pong {
   bool ok = 1;
 }
 
+message Extension {
+  string id = 1;
+  string version = 2;
+  google.protobuf.Struct data = 3;
+}
+
+message Contact {
+  string name = 2;
+  string last_name = 3;
+  string email = 4;
+}
+
+message AddressBook {
+  repeated Contact contacts = 1;
+}
+
+message Item {
+  string name = 1;
+  google.protobuf.Timestamp time = 2;
+  repeated Extension extensions = 3;
+}
+
 service BusinessCase {
-  rpc Ping(Empty) returns (Pong);
+  rpc Ping(google.protobuf.Empty) returns (Pong);
 }
